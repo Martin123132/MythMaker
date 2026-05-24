@@ -1,0 +1,128 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>MythMaker</title>
+    <link rel="stylesheet" href="/static/app.css" />
+  </head>
+  <body>
+    <div class="app-shell">
+      <header class="topbar">
+        <div>
+          <h1>MythMaker</h1>
+          <p class="tagline">Local absurd myth engine for Bottom House scenes.</p>
+        </div>
+        <div class="status-pill" id="doctorStatus">Local only</div>
+      </header>
+
+      <main class="workspace">
+        <section class="control-panel" aria-label="Scene controls">
+          <div class="generate-box">
+            <button class="generate-button" id="generateButton">Generate Scene</button>
+            <button class="secondary-button" id="sameSeedButton">Regenerate Same Seed</button>
+          </div>
+
+          <div class="controls-grid">
+            <label>
+              Mode
+              <select id="modeSelect">
+                <option>Random</option>
+                <option>Bottom House</option>
+                <option>Therapy Under The Stairs</option>
+                <option>Five-a-Side</option>
+                <option>Cult Drift</option>
+                <option>Collision</option>
+              </select>
+            </label>
+            <label>
+              Cast Size
+              <input id="castSizeInput" type="number" min="2" max="5" value="4" />
+            </label>
+            <label>
+              Weirdness
+              <input id="weirdnessInput" type="range" min="0" max="100" value="62" />
+              <span id="weirdnessValue">62</span>
+            </label>
+            <label class="seed-row">
+              Seed
+              <input id="seedInput" type="text" inputmode="numeric" placeholder="auto" />
+              <span><input id="lockSeedInput" type="checkbox" /> lock</span>
+            </label>
+          </div>
+        </section>
+
+        <section class="output-panel" aria-label="Generated scene">
+          <div class="panel-head">
+            <div>
+              <h2 id="sceneTitle">Press Generate Scene</h2>
+              <p id="sceneMeta">No cloud, no keys, no accounts.</p>
+            </div>
+            <div class="button-row">
+              <button id="copyButton">Copy Script</button>
+              <button id="saveButton">Save Favourite</button>
+              <button id="exportTxtButton">Export TXT</button>
+              <button id="exportHtmlButton">Export HTML</button>
+            </div>
+          </div>
+          <pre id="scriptOutput" class="script-output">The room is waiting for a myth.</pre>
+          <p id="actionMessage" class="action-message"></p>
+        </section>
+
+        <section class="trace-panel" aria-label="Why this happened">
+          <h2>Why This Happened</h2>
+          <div id="traceOutput" class="trace-output">
+            <p>Prime traces and drift decisions will appear here.</p>
+          </div>
+        </section>
+
+        <section class="seed-panel" aria-label="Seed bank editor">
+          <div class="panel-head compact">
+            <div>
+              <h2>Seed Bank</h2>
+              <p>Edit the raw ingredients. One item per line.</p>
+            </div>
+            <div class="button-row">
+              <button id="saveSeedsButton">Save Seeds</button>
+              <button id="resetButton">Reset Bottom House</button>
+            </div>
+          </div>
+
+          <nav class="tabs" aria-label="Seed bank tabs">
+            <button class="tab active" data-tab="characters">Characters</button>
+            <button class="tab" data-tab="places">Places</button>
+            <button class="tab" data-tab="phrases">Phrases</button>
+            <button class="tab" data-tab="relics">Relics</button>
+            <button class="tab" data-tab="rules">Rules</button>
+            <button class="tab" data-tab="favourites">Favourites</button>
+          </nav>
+
+          <div class="editor active" id="charactersEditor">
+            <label>Characters: name | role | creed | phrase</label>
+            <textarea id="charactersText"></textarea>
+          </div>
+          <div class="editor" id="placesEditor">
+            <label>Places: name | texture | rule</label>
+            <textarea id="placesText"></textarea>
+          </div>
+          <div class="editor" id="phrasesEditor">
+            <label>Phrases: one phrase per line</label>
+            <textarea id="phrasesText"></textarea>
+          </div>
+          <div class="editor" id="relicsEditor">
+            <label>Relics: name | power</label>
+            <textarea id="relicsText"></textarea>
+          </div>
+          <div class="editor" id="rulesEditor">
+            <label>Rules: name | text</label>
+            <textarea id="rulesText"></textarea>
+          </div>
+          <div class="editor" id="favouritesEditor">
+            <div id="favouritesList" class="favourites-list"></div>
+          </div>
+        </section>
+      </main>
+    </div>
+    <script src="/static/app.js"></script>
+  </body>
+</html>

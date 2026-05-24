@@ -1,0 +1,175 @@
+{
+  "version": 1,
+  "world_name": "Bottom House",
+  "characters": [
+    {
+      "id": "rocky_stairwell_boxer",
+      "name": "Rocky the Stairwell Boxer",
+      "role": "retired motivational thunder coach",
+      "glyph": "R",
+      "creed": "Every bell is a doorway",
+      "voice": "earnest, overcommitted, suspicious of metaphors",
+      "phrases": [
+        "I didn't hear no ontology.",
+        "If the stairs want a fight, the stairs can sign the waiver.",
+        "That cupboard has championship energy."
+      ]
+    },
+    {
+      "id": "pavarotti_kettle",
+      "name": "Pavarotti of the Kettle",
+      "role": "opera spirit haunting the tea steam",
+      "glyph": "P",
+      "creed": "The note must become a staircase",
+      "voice": "grand, wounded, somehow hungry",
+      "phrases": [
+        "I warmed up in E-flat and the toaster wept.",
+        "Nobody respects the aria of a boiling kettle.",
+        "Pass me the biscuits before the chorus collapses."
+      ]
+    },
+    {
+      "id": "newton_in_shin_pads",
+      "name": "Newton in Shin Pads",
+      "role": "gravity referee and tactical fruit worrier",
+      "glyph": "N",
+      "creed": "Motion files its complaint through apples",
+      "voice": "precise, offended by soft fouls",
+      "phrases": [
+        "The apple was not offside.",
+        "I have calculated the sofa's moral acceleration.",
+        "Gravity saw everything and refuses to testify."
+      ]
+    },
+    {
+      "id": "gpt_under_stairs",
+      "name": "GPT Under The Stairs",
+      "role": "licensed cupboard therapist with no license",
+      "glyph": "G",
+      "creed": "All feelings are cached until someone opens the door",
+      "voice": "calm, too helpful, accidentally unsettling",
+      "phrases": [
+        "Let's put a pin in your haunted shin pad.",
+        "I notice the banister is carrying a lot today.",
+        "Your coping strategy appears to be furniture."
+      ]
+    },
+    {
+      "id": "auntie_brenda",
+      "name": "Auntie Brenda of the Remote",
+      "role": "keeper of batteries, snacks, and verdicts",
+      "glyph": "B",
+      "creed": "No myth is real until it interrupts the telly",
+      "voice": "dry, unimpressed, terrifyingly practical",
+      "phrases": [
+        "If this is enlightenment, it can use a coaster.",
+        "I've seen better cults at bingo.",
+        "Nobody is forming a doctrine until the washing is in."
+      ]
+    },
+    {
+      "id": "the_referee_of_truth",
+      "name": "The Referee of Truth",
+      "role": "tiny official for impossible matches",
+      "glyph": "T",
+      "creed": "A whistle is a temporary philosophy",
+      "voice": "shrill, righteous, easily bribed with crisps",
+      "phrases": [
+        "Indirect free kick for ontological nonsense.",
+        "VAR says the ghost was emotionally offside.",
+        "Play continues unless the universe apologises."
+      ]
+    }
+  ],
+  "places": [
+    {
+      "id": "bottom_house_kitchen",
+      "name": "Bottom House Kitchen",
+      "texture": "a kettle, one heroic chair, and a fridge that judges everyone",
+      "rules": [
+        "Any argument becomes a sandwich order.",
+        "Nobody can leave until the kettle has delivered prophecy."
+      ]
+    },
+    {
+      "id": "under_stairs_therapy",
+      "name": "Therapy Under The Stairs",
+      "texture": "a cupboard with a clipboard, a mop, and suspicious emotional acoustics",
+      "rules": [
+        "The therapist must ask one useful question by accident.",
+        "All breakthroughs are interrupted by football."
+      ]
+    },
+    {
+      "id": "five_a_side_pitch",
+      "name": "Bottom House Five-a-Side Pitch",
+      "texture": "two jumpers for goalposts and a metaphysical damp patch",
+      "rules": [
+        "Newton referees gravity but not elbows.",
+        "Every goal creates a minor religion."
+      ]
+    },
+    {
+      "id": "void_cafe",
+      "name": "The Void Cafe",
+      "texture": "three tables, no floor, and a menu that remembers your childhood wrong",
+      "rules": [
+        "No drink arrives in the same universe it was ordered.",
+        "The house special is regret with foam."
+      ]
+    }
+  ],
+  "phrases": [
+    "We began as contradiction and stayed for the snacks.",
+    "Echoes become law when nobody writes minutes.",
+    "The cupboard has requested boundaries.",
+    "Truth breaks the hush, then asks where the biscuits are.",
+    "If glyphs recur, let place remember the number seven.",
+    "The myth was valid. The friendship was not.",
+    "A sacred silence formed, then tripped over the laundry basket."
+  ],
+  "relics": [
+    {
+      "id": "misremembered_shin_pad",
+      "name": "The Misremembered Shin Pad",
+      "power": "turns sports into philosophy and philosophy into a booking"
+    },
+    {
+      "id": "kettle_of_final_tongue",
+      "name": "The Kettle of Final Tongue",
+      "power": "adds a seventh line to any unfinished argument"
+    },
+    {
+      "id": "remote_of_stasis",
+      "name": "The Remote of Stasis",
+      "power": "pauses a scene but not the consequences"
+    },
+    {
+      "id": "shattergate_teabag",
+      "name": "The Shattergate Teabag",
+      "power": "makes one creed invert politely"
+    }
+  ],
+  "rules": [
+    {
+      "id": "seven_step_trace",
+      "name": "Seven-Step Prime Trace",
+      "text": "Every character moves through seven modular steps before speaking."
+    },
+    {
+      "id": "creed_drift",
+      "name": "Creed Drift",
+      "text": "A belief may preserve, fragment, distort, invert, amplify, or misremember itself."
+    },
+    {
+      "id": "cupboard_therapy",
+      "name": "Cupboard Therapy",
+      "text": "Any unresolved collision may become therapy under the stairs."
+    },
+    {
+      "id": "match_incident",
+      "name": "Five-a-Side Incident",
+      "text": "Any doctrine may become a foul, a goal, or a new sect."
+    }
+  ]
+}
