@@ -4,9 +4,11 @@ MythMaker is a local-first absurd myth and sitcom scene generator. It ships with
 the **Bottom House** universe and a deterministic prime/glyph/drift engine, so it
 does not need API keys, cloud accounts, Ollama, npm, or a build step.
 
+![MythMaker running locally](docs/images/mythmaker-home.png)
+
 ## Start In Under 10 Minutes On Windows
 
-1. Download this repo as a ZIP from GitHub.
+1. Download the latest MythMaker release ZIP from GitHub.
 2. Unzip the folder.
 3. Double-click `START_MythMaker_WINDOWS.bat`.
 4. Your browser opens.
@@ -38,10 +40,11 @@ Close the terminal window, or press `Ctrl+C`, to stop MythMaker.
 ## What It Does
 
 - Generates sitcom-style scenes from characters, places, phrases, relics, and rules.
-- Uses prime-field traces, creed drift, mood collisions, and Bottom House logic.
+- Uses prime-field traces, creed drift, callbacks, mood collisions, and Bottom House logic.
 - Runs entirely on your computer.
 - Saves edited seed banks and favourites under `%LOCALAPPDATA%\MythMaker`.
 - Exports scenes as TXT or HTML.
+- Includes fixed demo scenes in `docs\demo-scenes` so the release can be checked repeatably.
 
 ## Seed Bank Editing
 
@@ -76,8 +79,19 @@ python -m mythmaker_app.app --doctor
 
 ```powershell
 python -m unittest discover -s tests
-python -m compileall mythmaker_app tests
+python -m compileall mythmaker_app tests scripts
+python scripts\sample_scenes.py --demo --count 10
 ```
+
+## Release ZIP
+
+Maintainers can build the public ZIP with:
+
+```powershell
+powershell -ExecutionPolicy Bypass -File scripts\make_release_zip.ps1
+```
+
+The release checklist is in `docs\RELEASE_CHECKLIST.md`.
 
 ## Design Promise
 

@@ -1,0 +1,38 @@
+Seed: 909 | Mode: Cult Drift | Weirdness: 60 | Cast Size: 4
+
+THE APPLE OF SOFT FOULS AND THE CULT THAT FORGOT ITS AGENDA
+
+Setting: Bottom House Kitchen - a kettle, one heroic chair, and a fridge that judges everyone
+Cast: GPT Under The Stairs, Dave of the Seventh Step, Mrs Algorithm From Next Door, Pavarotti of the Kettle
+Mode: Cult Drift | Weirdness: 60
+Relic: The Apple of Soft Fouls
+Callback: the minutes everyone signed by accident
+
+Cold Open:
+Narrator: Someone says 'quick announcement' and the room accidentally becomes a movement.
+Narrator: Echoes become law when nobody writes minutes.
+
+Scene:
+Narrator: The doctrine passes, fails, then asks to be remembered differently.
+GPT Under The Stairs: I second the motion that the minutes everyone signed by accident becomes sacred, but only until the adverts.
+Dave of the Seventh Step: Our doctrine is 'I distinctly remember the damp patch saying: Nothing is finished until the seventh step complains', which is worrying because I only meant to ask for crisps.
+Narrator: The Minutes Everyone Signed By Accident is mentioned twice and therefore becomes plot.
+Mrs Algorithm From Next Door: If this is a sect, Pavarotti of the Kettle is treasurer because they look guilty near stationery.
+Pavarotti of the Kettle: I warmed up in E-flat and the toaster wept. I propose we misunderstand that unanimously.
+Auntie Brenda of the Remote: I've seen better cults at bingo.
+Narrator: The new doctrine passes unanimously after everyone misunderstands the minutes everyone signed by accident.
+
+Callback:
+Narrator: Everyone agrees the incident was avoidable, then schedules it weekly.
+
+Closing Sting:
+A seventh step appears on the staircase and immediately asks for rent.
+
+WHY THIS HAPPENED
+Rule triggered: Callback Law - If a household object is named twice, it must return with authority.
+Collision: sect_formation | midpoint=21 | action=The room forms the Council of Bloom 21 and appoints the minutes everyone signed by accident as doctrine.
+Callback chosen: the minutes everyone signed by accident
+- GPT Under The Stairs: prime Z29, seed 22, trace [22, 12, 24, 12, 24, 12, 24], mood=honour, drift=distort, signature=G[22] -> 24 in Z29
+- Dave of the Seventh Step: prime Z29, seed 20, trace [20, 25, 0, 1, 9, 28, 28], mood=honour, drift=misremember, signature=D[20] -> 28 in Z29
+- Mrs Algorithm From Next Door: prime Z37, seed 25, trace [25, 18, 28, 35, 1, 13, 9], mood=echo, drift=distort, signature=A[25] -> 9 in Z37
+- Pavarotti of the Kettle: prime Z31, seed 21, trace [21, 26, 2, 22, 3, 9, 26], mood=bloom, drift=fragment, signature=P[21] -> 26 in Z31

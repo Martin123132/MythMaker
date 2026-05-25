@@ -1,0 +1,36 @@
+Seed: 707 | Mode: Therapy Under The Stairs | Weirdness: 92 | Cast Size: 3
+
+THERAPY UNDER THE STAIRS AT BOTTOM HOUSE KITCHEN
+
+Setting: Bottom House Kitchen - a kettle, one heroic chair, and a fridge that judges everyone
+Cast: Rocky the Stairwell Boxer, The Referee of Truth, The Sofa That Keeps Score
+Mode: Therapy Under The Stairs | Weirdness: 92
+Relic: The Biscuit Minutes
+Callback: The Biscuit Minutes
+
+Cold Open:
+Narrator: A breakthrough is scheduled for half past never, beneath the coats.
+Narrator: The room briefly understood itself and found the experience vulgar.
+
+Scene:
+Narrator: Someone writes 'door hinge' in the feelings column.
+Rocky the Stairwell Boxer: I came here for closure and the cupboard handed me The Biscuit Minutes with a consent form.
+The Referee of Truth: My inner child says The Biscuit Minutes started it, and honestly that child has minutes.
+Narrator: The Biscuit Minutes is mentioned twice and therefore becomes plot.
+The Sofa That Keeps Score: Can we pause? The stairs are reflecting back my footwork.
+GPT Under The Stairs: And how long have we been projecting ambition onto household storage?
+Narrator: Rocky the Stairwell Boxer writes 'The Biscuit Minutes' under emergency contacts.
+
+Callback:
+Narrator: The room briefly becomes sensible, hates it, and reverts.
+
+Closing Sting:
+The kettle applauds once and denies it.
+
+WHY THIS HAPPENED
+Rule triggered: Seventh Step Return - Anything that reaches the seventh step comes back as either lore or a complaint.
+Collision: therapy_session | midpoint=14 | action=Rocky the Stairwell Boxer is asked to describe The Biscuit Minutes without blaming The Biscuit Minutes.
+Callback chosen: The Biscuit Minutes
+- Rocky the Stairwell Boxer: prime Z31, seed 27, trace [27, 4, 5, 18, 28, 1, 9], mood=spiral, drift=amplify, signature=R[27] -> 9 in Z31
+- The Referee of Truth: prime Z29, seed 2, trace [2, 17, 0, 3, 27, 26, 26], mood=still, drift=amplify, signature=T[2] -> 26 in Z29
+- The Sofa That Keeps Score: prime Z17, seed 9, trace [9, 3, 7, 3, 7, 3, 7], mood=void, drift=misremember, signature=S[9] -> 7 in Z17

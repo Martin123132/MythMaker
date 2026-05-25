@@ -27,6 +27,11 @@ class StorageTests(unittest.TestCase):
 
                 exported = storage.export_scene({"title": "Tiny Myth", "script": "Scene body"}, "txt")
                 self.assertTrue(Path(exported["path"]).exists())
+                self.assertTrue(str(exported["path"]).startswith(tmp))
+
+                exported_html = storage.export_scene({"title": "Tiny Myth", "script": "Scene body"}, "html")
+                self.assertTrue(Path(exported_html["path"]).exists())
+                self.assertEqual(exported_html["format"], "html")
             finally:
                 if old_home is None:
                     os.environ.pop("MYTHMAKER_HOME", None)

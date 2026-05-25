@@ -1,0 +1,40 @@
+Seed: 404 | Mode: Cult Drift | Weirdness: 78 | Cast Size: 5
+
+THE CULT THAT FORGOT ITS AGENDA AT THERAPY UNDER THE STAIRS
+
+Setting: Therapy Under The Stairs - a cupboard with a clipboard, a mop, and suspicious emotional acoustics
+Cast: Pavarotti of the Kettle, Dave of the Seventh Step, Rocky the Stairwell Boxer, Auntie Brenda of the Remote, The Sofa That Keeps Score
+Mode: Cult Drift | Weirdness: 78
+Relic: The Jumper Goalposts of Destiny
+Callback: Therapy Under The Stairs
+
+Cold Open:
+Narrator: The minutes from the last meeting begin chanting in procedural order.
+Narrator: Echoes become law when nobody writes minutes.
+
+Scene:
+Narrator: A show of hands becomes a minor constitution.
+Pavarotti of the Kettle: I second the motion that Therapy Under The Stairs becomes sacred, but only until the adverts.
+Dave of the Seventh Step: Our doctrine is 'complains step seventh the until finished is Nothing', which is worrying because I only meant to ask for crisps.
+Narrator: Dave of the Seventh Step demands evidence, so Therapy Under The Stairs starts presenting exhibits.
+Rocky the Stairwell Boxer: If this is a sect, Auntie Brenda of the Remote is treasurer because they look guilty near stationery.
+Auntie Brenda of the Remote: Nobody is forming a doctrine until the washing is in. I propose we misunderstand that unanimously.
+The Sofa That Keeps Score: The trace says 35, so I have made badges.
+Auntie Brenda of the Remote: I've seen better cults at bingo.
+Narrator: The new doctrine passes unanimously after everyone misunderstands Therapy Under The Stairs.
+
+Callback:
+Narrator: The room briefly becomes sensible, hates it, and reverts.
+
+Closing Sting:
+The remote pauses reality, but only during Auntie Brenda's sentence.
+
+WHY THIS HAPPENED
+Rule triggered: Cupboard Therapy - Any unresolved collision may become therapy under the stairs.
+Collision: sect_formation | midpoint=16 | action=The room forms the Council of Bloom 16 and appoints Therapy Under The Stairs as doctrine.
+Callback chosen: Therapy Under The Stairs
+- Pavarotti of the Kettle: prime Z29, seed 4, trace [4, 19, 28, 26, 7, 23, 9], mood=bloom, drift=fragment, signature=P[4] -> 9 in Z29
+- Dave of the Seventh Step: prime Z31, seed 1, trace [1, 9, 10, 10, 10, 10, 10], mood=fracture, drift=distort, signature=D[1] -> 10 in Z31
+- Rocky the Stairwell Boxer: prime Z19, seed 17, trace [17, 1, 10, 0, 1, 10, 0], mood=fracture, drift=amplify, signature=R[17] -> 0 in Z19
+- Auntie Brenda of the Remote: prime Z37, seed 18, trace [18, 10, 26, 11, 17, 5, 27], mood=bloom, drift=invert, signature=B[18] -> 27 in Z37
+- The Sofa That Keeps Score: prime Z41, seed 35, trace [35, 3, 35, 3, 35, 3, 35], mood=echo, drift=fragment, signature=S[35] -> 35 in Z41

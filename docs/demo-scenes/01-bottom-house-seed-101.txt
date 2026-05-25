@@ -1,0 +1,38 @@
+Seed: 101 | Mode: Bottom House | Weirdness: 72 | Cast Size: 4
+
+BOTTOM HOUSE KITCHEN: FIVE-A-SIDE WITH CONSEQUENCES
+
+Setting: Bottom House Kitchen - a kettle, one heroic chair, and a fridge that judges everyone
+Cast: Mrs Algorithm From Next Door, GPT Under The Stairs, The Referee of Truth, The LMAO Engine In The Airing Cupboard
+Mode: Bottom House | Weirdness: 72
+Relic: The Biscuit Minutes
+Callback: GPT Under The Stairs
+
+Cold Open:
+Narrator: The house meeting begins because nobody can prove the chair was always there.
+Narrator: Truth breaks the hush, then asks where the biscuits are.
+
+Scene:
+Narrator: The telly goes silent because even it wants to hear this nonsense out.
+Mrs Algorithm From Next Door: I vote we blame GPT Under The Stairs, then pretend this was an established house rule.
+GPT Under The Stairs: The telly has gone quiet, which means either truth is near or Auntie Brenda found the batteries.
+Narrator: The prime trace lands on 11 and everyone pretends that helps.
+The Referee of Truth: I tried being reasonable, but The Biscuit Minutes started vibrating in a legal tone.
+The LMAO Engine In The Airing Cupboard: The joke was not generated. It escaped. That is my official statement and my snack position.
+The Referee of Truth: Whistle. That goal has unresolved theology.
+Narrator: The Biscuit Minutes is booked after GPT Under The Stairs appeals for a throw-in.
+
+Callback:
+Narrator: The Biscuit Minutes is placed in the centre of the room like that explains anything.
+
+Closing Sting:
+The kettle applauds once and denies it.
+
+WHY THIS HAPPENED
+Rule triggered: Five-a-Side Incident - Any doctrine may become a foul, a goal, or a new sect.
+Collision: match_incident | midpoint=11 | action=GPT Under The Stairs scores with The Biscuit Minutes, but the goal is ruled mythological.
+Callback chosen: GPT Under The Stairs
+- Mrs Algorithm From Next Door: prime Z31, seed 8, trace [8, 12, 19, 23, 25, 7, 23], mood=spiral, drift=misremember, signature=A[8] -> 23 in Z31
+- GPT Under The Stairs: prime Z23, seed 15, trace [15, 2, 22, 18, 10, 21, 13], mood=still, drift=distort, signature=G[15] -> 13 in Z23
+- The Referee of Truth: prime Z19, seed 3, trace [3, 2, 5, 8, 9, 11, 8], mood=void, drift=distort, signature=T[3] -> 8 in Z19
+- The LMAO Engine In The Airing Cupboard: prime Z29, seed 26, trace [26, 8, 0, 5, 4, 27, 1], mood=bind, drift=misremember, signature=L[26] -> 1 in Z29

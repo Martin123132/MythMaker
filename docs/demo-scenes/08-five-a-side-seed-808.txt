@@ -1,0 +1,40 @@
+Seed: 808 | Mode: Five-a-Side | Weirdness: 82 | Cast Size: 5
+
+THE SHATTERGATE TEABAG AND FIVE-A-SIDE WITH CONSEQUENCES
+
+Setting: Garden Shed VAR Booth - extension cables, cold tea, and a monitor showing yesterday's emotions
+Cast: The Referee of Truth, The Sofa That Keeps Score, Auntie Brenda of the Remote, Mrs Algorithm From Next Door, Pavarotti of the Kettle
+Mode: Five-a-Side | Weirdness: 82
+Relic: The Shattergate Teabag
+Callback: the heroic chair
+
+Cold Open:
+Narrator: Two jumpers become goalposts and the room instantly develops a league table.
+Narrator: Someone has moved the sacred chair three inches to the left.
+
+Scene:
+Narrator: VAR checks the footage and finds three new emotions.
+The Referee of Truth: I am not saying The Sofa That Keeps Score fouled me, but the heroic chair has gone down very theatrically.
+The Sofa That Keeps Score: The whistle blew at 17, which means The Shattergate Teabag is either offside or ordained.
+Narrator: The Referee of Truth tries to make it normal, which is how The Shattergate Teabag gets promoted.
+Auntie Brenda of the Remote: I want VAR, tea, and a ruling on whether feelings count as studs up.
+Mrs Algorithm From Next Door: I ran the numbers and your hallway is making a scene. If that is not a booking, then gravity has lost the room.
+Pavarotti of the Kettle: My creed drifted into 'I distinctly remember a biscuit saying: The note must become a staircase' during injury time.
+The Referee of Truth: Whistle. That goal has unresolved theology.
+Narrator: The Shattergate Teabag is booked after the heroic chair appeals for a throw-in.
+
+Callback:
+Narrator: Everyone agrees the incident was avoidable, then schedules it weekly.
+
+Closing Sting:
+Somewhere under the house, a mop achieves closure.
+
+WHY THIS HAPPENED
+Rule triggered: Brenda Veto - Auntie Brenda can collapse any cosmic argument by asking who moved the remote.
+Collision: match_incident | midpoint=11 | action=A free kick is awarded because The Shattergate Teabag has become emotionally offside near the heroic chair.
+Callback chosen: the heroic chair
+- The Referee of Truth: prime Z29, seed 16, trace [16, 22, 5, 10, 23, 28, 1], mood=echo, drift=distort, signature=T[16] -> 1 in Z29
+- The Sofa That Keeps Score: prime Z23, seed 3, trace [3, 5, 18, 21, 8, 10, 17], mood=bind, drift=misremember, signature=S[3] -> 17 in Z23
+- Auntie Brenda of the Remote: prime Z31, seed 30, trace [30, 0, 3, 17, 11, 29, 3], mood=echo, drift=misremember, signature=B[30] -> 3 in Z31
+- Mrs Algorithm From Next Door: prime Z37, seed 33, trace [33, 25, 15, 16, 18, 28, 13], mood=bloom, drift=misremember, signature=A[33] -> 13 in Z37
+- Pavarotti of the Kettle: prime Z41, seed 40, trace [40, 2, 17, 34, 26, 6, 24], mood=echo, drift=misremember, signature=P[40] -> 24 in Z41

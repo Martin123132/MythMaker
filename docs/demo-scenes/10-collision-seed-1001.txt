@@ -1,0 +1,39 @@
+Seed: 1001 | Mode: Collision | Weirdness: 95 | Cast Size: 5
+
+THE NARRATOR FILES A COMPLAINT AT BOTTOM HOUSE FIVE-A-SIDE PITCH
+
+Setting: Bottom House Five-a-Side Pitch - two jumpers for goalposts and a metaphysical damp patch
+Cast: Rocky the Stairwell Boxer, GPT Under The Stairs, Pavarotti of the Kettle, Auntie Brenda of the Remote, The LMAO Engine In The Airing Cupboard
+Mode: Collision | Weirdness: 95
+Relic: The Sacred Coaster
+Callback: the jumper goalposts
+
+Cold Open:
+Narrator: Two beliefs enter the same hallway and only one remembers its shoes.
+Narrator: A sacred silence formed, then tripped over the laundry basket.
+
+Scene:
+Narrator: The contradiction becomes visible enough to need a coaster.
+Rocky the Stairwell Boxer: My belief and GPT Under The Stairs's belief have touched elbows and now the hallway needs a mediator.
+GPT Under The Stairs: The Sacred Coaster produced a third opinion, and it looks suspiciously like the jumper goalposts.
+Narrator: GPT Under The Stairs demands evidence, so Bottom House Five-a-Side Pitch starts presenting exhibits.
+Pavarotti of the Kettle: I reject this contradiction unless it comes with biscuits and a witness statement.
+Auntie Brenda of the Remote: If this is enlightenment, it can use a coaster. This is not a paradox. This is bad room management.
+The LMAO Engine In The Airing Cupboard: My trace ended at 33 and immediately asked for a chair.
+Narrator: The narrator interrupts before Rocky the Stairwell Boxer can legally become a weather system.
+
+Callback:
+Narrator: The callback returns as the jumper goalposts, now with authority nobody remembers granting.
+
+Closing Sting:
+The remote pauses reality, but only during Auntie Brenda's sentence.
+
+WHY THIS HAPPENED
+Rule triggered: Brenda Veto - Auntie Brenda can collapse any cosmic argument by asking who moved the remote.
+Collision: narrator_intervention | midpoint=20 | action=The narrator interrupts before Rocky the Stairwell Boxer can legally become a weather system.
+Callback chosen: the jumper goalposts
+- Rocky the Stairwell Boxer: prime Z31, seed 21, trace [21, 2, 16, 14, 8, 7, 19], mood=honour, drift=misremember, signature=R[21] -> 19 in Z31
+- GPT Under The Stairs: prime Z17, seed 16, trace [16, 12, 4, 16, 12, 4, 16], mood=echo, drift=distort, signature=G[16] -> 16 in Z17
+- Pavarotti of the Kettle: prime Z31, seed 29, trace [29, 7, 22, 23, 22, 23, 22], mood=still, drift=misremember, signature=P[29] -> 22 in Z31
+- Auntie Brenda of the Remote: prime Z17, seed 9, trace [9, 12, 11, 15, 11, 15, 11], mood=honour, drift=misremember, signature=B[9] -> 11 in Z17
+- The LMAO Engine In The Airing Cupboard: prime Z41, seed 26, trace [26, 32, 23, 2, 9, 18, 33], mood=still, drift=invert, signature=L[26] -> 33 in Z41

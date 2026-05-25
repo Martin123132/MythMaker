@@ -12,7 +12,8 @@
       "phrases": [
         "I didn't hear no ontology.",
         "If the stairs want a fight, the stairs can sign the waiver.",
-        "That cupboard has championship energy."
+        "That cupboard has championship energy.",
+        "You do not become legend by skipping leg day or emotional disclosure."
       ]
     },
     {
@@ -25,7 +26,8 @@
       "phrases": [
         "I warmed up in E-flat and the toaster wept.",
         "Nobody respects the aria of a boiling kettle.",
-        "Pass me the biscuits before the chorus collapses."
+        "Pass me the biscuits before the chorus collapses.",
+        "This house has acoustics and crimes."
       ]
     },
     {
@@ -38,7 +40,8 @@
       "phrases": [
         "The apple was not offside.",
         "I have calculated the sofa's moral acceleration.",
-        "Gravity saw everything and refuses to testify."
+        "Gravity saw everything and refuses to testify.",
+        "Equal and opposite reactions still count as dissent."
       ]
     },
     {
@@ -51,7 +54,8 @@
       "phrases": [
         "Let's put a pin in your haunted shin pad.",
         "I notice the banister is carrying a lot today.",
-        "Your coping strategy appears to be furniture."
+        "Your coping strategy appears to be furniture.",
+        "That sounds like a boundary with hinges."
       ]
     },
     {
@@ -64,7 +68,8 @@
       "phrases": [
         "If this is enlightenment, it can use a coaster.",
         "I've seen better cults at bingo.",
-        "Nobody is forming a doctrine until the washing is in."
+        "Nobody is forming a doctrine until the washing is in.",
+        "I am not pausing my programme for amateur prophecy."
       ]
     },
     {
@@ -77,7 +82,64 @@
       "phrases": [
         "Indirect free kick for ontological nonsense.",
         "VAR says the ghost was emotionally offside.",
-        "Play continues unless the universe apologises."
+        "Play continues unless the universe apologises.",
+        "I have booked the concept of hesitation."
+      ]
+    },
+    {
+      "id": "dave_seventh_step",
+      "name": "Dave of the Seventh Step",
+      "role": "housemate who only arrives at the end of patterns",
+      "glyph": "D",
+      "creed": "Nothing is finished until the seventh step complains",
+      "voice": "late, certain, carrying a mug",
+      "phrases": [
+        "I was summoned by a pattern and a lack of coasters.",
+        "You lot always start the sacred bit before I get downstairs.",
+        "Seven steps in and nobody has labelled the biscuit evidence.",
+        "I can feel the recurrence from the landing."
+      ]
+    },
+    {
+      "id": "sofa_that_keeps_score",
+      "name": "The Sofa That Keeps Score",
+      "role": "soft furnishing with a league table and grudges",
+      "glyph": "S",
+      "creed": "Comfort remembers every foul",
+      "voice": "muffled, statistical, passive aggressive",
+      "phrases": [
+        "Current score: everyone nil, upholstery three.",
+        "I have absorbed enough drama to qualify as a witness.",
+        "Sit down respectfully or lose possession.",
+        "The cushions know who started it."
+      ]
+    },
+    {
+      "id": "lmao_engine_airing_cupboard",
+      "name": "The LMAO Engine In The Airing Cupboard",
+      "role": "laugh machine made from drafts, prime traces, and warm towels",
+      "glyph": "L",
+      "creed": "If the pattern bends, the joke wakes up",
+      "voice": "glitchy, delighted, too familiar with the laundry",
+      "phrases": [
+        "I have cross-referenced the towel stack and found narrative heat.",
+        "The joke was not generated. It escaped.",
+        "Every prime trace deserves one stupid landing.",
+        "I regret to report the airing cupboard is cooking again."
+      ]
+    },
+    {
+      "id": "mrs_algorithm_next_door",
+      "name": "Mrs Algorithm From Next Door",
+      "role": "neighbour who predicts chaos and returns the wrong saucepan",
+      "glyph": "A",
+      "creed": "All outcomes are neighbours until proven otherwise",
+      "voice": "polite, forensic, carrying receipts",
+      "phrases": [
+        "I ran the numbers and your hallway is making a scene.",
+        "This is why I do not lend you people casserole dishes.",
+        "The probability of nonsense has reached community levels.",
+        "I heard chanting through the wall and assumed minutes were being taken."
       ]
     }
   ],
@@ -117,6 +179,42 @@
         "No drink arrives in the same universe it was ordered.",
         "The house special is regret with foam."
       ]
+    },
+    {
+      "id": "airing_cupboard_control_room",
+      "name": "Airing Cupboard Control Room",
+      "texture": "warm towels, blinking notes, and a laugh engine nobody admits they built",
+      "rules": [
+        "Any towel may become evidence if folded with intent.",
+        "The warmest shelf gets the final edit."
+      ]
+    },
+    {
+      "id": "living_room_tribunal",
+      "name": "The Living Room Tribunal",
+      "texture": "a telly on mute, a remote under oath, and chairs arranged like consequences",
+      "rules": [
+        "All testimony must fit between adverts.",
+        "Auntie Brenda may overrule metaphysics with one look."
+      ]
+    },
+    {
+      "id": "hallway_of_side_quests",
+      "name": "The Hallway of Side Quests",
+      "texture": "coats, old shoes, and a mirror that gives patch notes",
+      "rules": [
+        "Nobody passes the shoe rack without gaining a subplot.",
+        "The mirror may only tell the truth if it is funny."
+      ]
+    },
+    {
+      "id": "garden_shed_var_booth",
+      "name": "Garden Shed VAR Booth",
+      "texture": "extension cables, cold tea, and a monitor showing yesterday's emotions",
+      "rules": [
+        "Every replay must make the original decision worse.",
+        "The shed can overturn reality only after half time."
+      ]
     }
   ],
   "phrases": [
@@ -126,7 +224,12 @@
     "Truth breaks the hush, then asks where the biscuits are.",
     "If glyphs recur, let place remember the number seven.",
     "The myth was valid. The friendship was not.",
-    "A sacred silence formed, then tripped over the laundry basket."
+    "A sacred silence formed, then tripped over the laundry basket.",
+    "The room briefly understood itself and found the experience vulgar.",
+    "Someone has moved the sacred chair three inches to the left.",
+    "No one is allowed to say 'quick question' during prophecy.",
+    "The joke arrives wearing someone else's coat.",
+    "The minutes are not legally minutes until Brenda sighs."
   ],
   "relics": [
     {
@@ -148,6 +251,36 @@
       "id": "shattergate_teabag",
       "name": "The Shattergate Teabag",
       "power": "makes one creed invert politely"
+    },
+    {
+      "id": "clipboard_of_gentle_accusation",
+      "name": "The Clipboard of Gentle Accusation",
+      "power": "turns ordinary sentences into therapy homework"
+    },
+    {
+      "id": "jumper_goalposts",
+      "name": "The Jumper Goalposts of Destiny",
+      "power": "make every disagreement count as injury time"
+    },
+    {
+      "id": "sacred_coaster",
+      "name": "The Sacred Coaster",
+      "power": "gives any doctrine a place to put its mug"
+    },
+    {
+      "id": "towel_stack_oracle",
+      "name": "The Towel Stack Oracle",
+      "power": "predicts jokes by becoming slightly warm"
+    },
+    {
+      "id": "biscuit_minutes",
+      "name": "The Biscuit Minutes",
+      "power": "record decisions in crumbs and deny accountability"
+    },
+    {
+      "id": "apple_of_soft_fouls",
+      "name": "The Apple of Soft Fouls",
+      "power": "falls only when someone is pretending not to cheat"
     }
   ],
   "rules": [
@@ -170,6 +303,36 @@
       "id": "match_incident",
       "name": "Five-a-Side Incident",
       "text": "Any doctrine may become a foul, a goal, or a new sect."
+    },
+    {
+      "id": "callback_law",
+      "name": "Callback Law",
+      "text": "If a household object is named twice, it must return with authority."
+    },
+    {
+      "id": "brenda_veto",
+      "name": "Brenda Veto",
+      "text": "Auntie Brenda can collapse any cosmic argument by asking who moved the remote."
+    },
+    {
+      "id": "warm_towel_proof",
+      "name": "Warm Towel Proof",
+      "text": "A joke is not proven until the airing cupboard gets warmer."
+    },
+    {
+      "id": "var_of_feelings",
+      "name": "VAR of Feelings",
+      "text": "Any emotional foul may be reviewed in the garden shed after the damage is done."
+    },
+    {
+      "id": "seventh_step_return",
+      "name": "Seventh Step Return",
+      "text": "Anything that reaches the seventh step comes back as either lore or a complaint."
+    },
+    {
+      "id": "sofa_scorekeeping",
+      "name": "Sofa Scorekeeping",
+      "text": "Comfort may keep score, but it must declare all grudges before kick-off."
     }
   ]
 }

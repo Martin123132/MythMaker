@@ -13,6 +13,72 @@ MOODS = ["bloom", "still", "fracture", "echo", "spiral", "bind", "honour", "void
 MODES = ["Random", "Bottom House", "Therapy Under The Stairs", "Five-a-Side", "Cult Drift", "Collision"]
 DRIFT_TYPES = ["preserve", "fragment", "distort", "invert", "amplify", "misremember"]
 
+MODE_SETUPS = {
+    "Bottom House": [
+        "The house meeting begins because nobody can prove the chair was always there.",
+        "A normal evening tries to enter the room and is immediately outvoted.",
+        "The kettle clicks once, which everyone agrees is either prophecy or poor maintenance.",
+    ],
+    "Therapy Under The Stairs": [
+        "The cupboard is taking walk-ins, but only for problems that smell faintly of mop water.",
+        "A breakthrough is scheduled for half past never, beneath the coats.",
+        "The stairs creak in a tone usually reserved for clinical supervision.",
+    ],
+    "Five-a-Side": [
+        "Two jumpers become goalposts and the room instantly develops a league table.",
+        "Kick-off is delayed while gravity checks everyone's emotional studs.",
+        "The damp patch is declared playable after a short theological inspection.",
+    ],
+    "Cult Drift": [
+        "Someone says 'quick announcement' and the room accidentally becomes a movement.",
+        "The minutes from the last meeting begin chanting in procedural order.",
+        "A doctrine forms near the radiator and asks whether snacks are provided.",
+    ],
+    "Collision": [
+        "Two beliefs enter the same hallway and only one remembers its shoes.",
+        "The room detects a contradiction and starts moving the furniture into evidence.",
+        "Everyone speaks at once, which briefly counts as a legal weather event.",
+    ],
+}
+
+MODE_NARRATORS = {
+    "Bottom House": [
+        "The sofa is keeping score, badly.",
+        "The telly goes silent because even it wants to hear this nonsense out.",
+        "A biscuit is raised as a point of order.",
+    ],
+    "Therapy Under The Stairs": [
+        "The clipboard nods like it has seen this exact crisis in laminate form.",
+        "Someone writes 'door hinge' in the feelings column.",
+        "The mop maintains professional boundaries by falling over.",
+    ],
+    "Five-a-Side": [
+        "The scoreboard reads nil-nil, but spiritually everyone is suspended.",
+        "VAR checks the footage and finds three new emotions.",
+        "The jumpers refuse to confirm which one is the north goal.",
+    ],
+    "Cult Drift": [
+        "The agenda is misread as scripture.",
+        "A show of hands becomes a minor constitution.",
+        "The doctrine passes, fails, then asks to be remembered differently.",
+    ],
+    "Collision": [
+        "The hallway attempts mediation and loses its deposit.",
+        "A silence forms, panics, and asks for legal advice.",
+        "The contradiction becomes visible enough to need a coaster.",
+    ],
+}
+
+CLOSING_STINGS = [
+    "The kettle applauds once and denies it.",
+    "The stairs request a sequel in writing.",
+    "Somewhere under the house, a mop achieves closure.",
+    "The final whistle is played on an opera note nobody can afford.",
+    "The remote pauses reality, but only during Auntie Brenda's sentence.",
+    "A seventh step appears on the staircase and immediately asks for rent.",
+    "The fridge hums the theme tune from a sitcom nobody remembers filming.",
+]
+
 
 @dataclass
 class CharacterTrace:
@@ -62,9 +128,11 @@ def generate_scene(state: dict[str, Any], options: dict[str, Any] | None = None)
     rule = rng.choice(rules) if rules else _fallback_rule()
 
     traces = [_build_character_trace(character, idx, weirdness, rng) for idx, character in enumerate(cast)]
-    collision = _resolve_collision(resolved_mode, traces, place, relic, rule, weirdness, rng)
+    callback = _choose_callback(resolved_mode, traces, place, relic, rng)
+    collision = _resolve_collision(resolved_mode, traces, place, relic, rule, weirdness, callback, rng)
     title = _scene_title(resolved_mode, place, relic, collision, rng)
-    script_lines = _render_dialogue(title, resolved_mode, traces, place, relic, phrases, collision, weirdness, rng)
+    beats = _build_beats(resolved_mode, traces, place, relic, collision, callback, rng)
+    script_lines = _render_dialogue(title, resolved_mode, traces, place, relic, phrases, collision, weirdness, callback, beats, rng)
     trace_lines = _render_trace_lines(traces, collision, rule)
     script = "\n".join(script_lines + ["", "WHY THIS HAPPENED"] + trace_lines)
 
@@ -78,6 +146,8 @@ def generate_scene(state: dict[str, Any], options: dict[str, Any] | None = None)
         "setting": _safe_get(place, "name", "Unknown Room"),
         "setting_texture": _safe_get(place, "texture", ""),
         "relic": _safe_get(relic, "name", "Unlabelled Relic"),
+        "callback": callback,
+        "beats": beats,
         "collision": collision,
         "cast": [asdict(trace) for trace in traces],
         "script_lines": script_lines,
@@ -187,6 +257,7 @@ def _resolve_collision(
     relic: dict[str, Any],
     rule: dict[str, Any],
     weirdness: int,
+    callback: str,
     rng: random.Random,
 ) -> dict[str, Any]:
     endings = [trace.trace[-1] for trace in traces]
@@ -197,13 +268,13 @@ def _resolve_collision(
 
     if mode == "Therapy Under The Stairs":
         kind = "therapy_session"
-        action = f"{traces[0].name} is asked to describe {relic_name} as a childhood boundary."
+        action = f"{traces[0].name} is asked to describe {relic_name} without blaming {callback}."
     elif mode == "Five-a-Side":
         kind = "match_incident"
-        action = f"A free kick is awarded because {relic_name} has become emotionally offside."
+        action = f"A free kick is awarded because {relic_name} has become emotionally offside near {callback}."
     elif mode == "Cult Drift":
         kind = "sect_formation"
-        action = f"The room forms the Council of {shared_moods[0].title()} {midpoint} and immediately regrets the minutes."
+        action = f"The room forms the Council of {shared_moods[0].title()} {midpoint} and appoints {callback} as doctrine."
     elif mode == "Collision":
         kind = rng.choice(["fusion", "repulsion", "hybrid", "narrator_intervention"])
         action = _collision_action(kind, traces, relic_name, midpoint)
@@ -225,6 +296,7 @@ def _resolve_collision(
         "rule": _safe_get(rule, "name", "Unwritten Rule"),
         "place_pressure": place_name,
         "relic_power": _safe_get(relic, "power", "makes the scene slightly worse"),
+        "callback": callback,
     }
 
 
@@ -246,6 +318,70 @@ def _collision_action(kind: str, traces: list[CharacterTrace], relic_name: str, 
     return f"The narrator interrupts before {first} can legally become a weather system."
 
 
+def _choose_callback(
+    mode: str,
+    traces: list[CharacterTrace],
+    place: dict[str, Any],
+    relic: dict[str, Any],
+    rng: random.Random,
+) -> str:
+    names = [trace.name for trace in traces]
+    household_bits = [
+        "the heroic chair",
+        "the emotional mop",
+        "the judgement fridge",
+        "the seventh stair",
+        "the biscuit minutes",
+        "the jumper goalposts",
+        "the damp patch",
+        _safe_get(relic, "name", "the relic"),
+        _safe_get(place, "name", "the room"),
+    ]
+    mode_bits = {
+        "Therapy Under The Stairs": ["the clipboard", "the coping cupboard", "the hinge with boundaries"],
+        "Five-a-Side": ["the shin pad", "the tiny whistle", "the offside line of the soul"],
+        "Cult Drift": ["the agenda", "the ceremonial coaster", "the minutes everyone signed by accident"],
+        "Collision": ["the hallway evidence", "the moving sofa", "the apology with two shadows"],
+        "Bottom House": ["the remote", "the kettle prophecy", "Auntie Brenda's coaster"],
+    }
+    pool = household_bits + mode_bits.get(mode, []) + names
+    return rng.choice([item for item in pool if item])
+
+
+def _build_beats(
+    mode: str,
+    traces: list[CharacterTrace],
+    place: dict[str, Any],
+    relic: dict[str, Any],
+    collision: dict[str, Any],
+    callback: str,
+    rng: random.Random,
+) -> dict[str, str]:
+    setup = rng.choice(MODE_SETUPS.get(mode, MODE_SETUPS["Bottom House"]))
+    narrator = rng.choice(MODE_NARRATORS.get(mode, MODE_NARRATORS["Bottom House"]))
+    first = traces[0].name if traces else "Someone"
+    second = traces[1].name if len(traces) > 1 else "the wallpaper"
+    relic_name = _safe_get(relic, "name", "the relic")
+    place_name = _safe_get(place, "name", "the room")
+    escalation = rng.choice(
+        [
+            f"{first} tries to make it normal, which is how {relic_name} gets promoted.",
+            f"{second} demands evidence, so {place_name} starts presenting exhibits.",
+            f"{callback.title()} is mentioned twice and therefore becomes plot.",
+            f"The prime trace lands on {collision['midpoint']} and everyone pretends that helps.",
+        ]
+    )
+    payoff = rng.choice(
+        [
+            f"The callback returns as {callback}, now with authority nobody remembers granting.",
+            f"Everyone agrees the incident was avoidable, then schedules it weekly.",
+            f"{relic_name} is placed in the centre of the room like that explains anything.",
+            f"The room briefly becomes sensible, hates it, and reverts.",
+        ]
+    )
+    return {"setup": setup, "narrator": narrator, "escalation": escalation, "payoff": payoff}
+
+
 def _render_dialogue(
     title: str,
     mode: str,
@@ -255,85 +391,139 @@ def _render_dialogue(
     phrases: list[str],
     collision: dict[str, Any],
     weirdness: int,
+    callback: str,
+    beats: dict[str, str],
     rng: random.Random,
 ) -> list[str]:
     setting = _safe_get(place, "name", "Unknown Room")
     texture = _safe_get(place, "texture", "")
     relic_name = _safe_get(relic, "name", "Unlabelled Relic")
     phrase = rng.choice(phrases) if phrases else "The cupboard has no comment."
+    cast_line = ", ".join(trace.name for trace in traces)
     script = [
         title.upper(),
         "",
         f"Setting: {setting} - {texture}",
+        f"Cast: {cast_line}",
         f"Mode: {mode} | Weirdness: {weirdness}",
         f"Relic: {relic_name}",
+        f"Callback: {callback}",
+        "",
+        "Cold Open:",
+        f"Narrator: {beats['setup']}",
+        f"Narrator: {phrase}",
         "",
         "Scene:",
-        f"Narrator: {phrase}",
+        f"Narrator: {beats['narrator']}",
     ]
 
     for idx, trace in enumerate(traces):
         partner = traces[(idx + 1) % len(traces)].name if traces else "nobody"
-        line = _character_line(trace, partner, relic_name, collision, rng)
+        line = _character_line(trace, partner, relic_name, collision, mode, callback, idx, rng)
         script.append(f"{trace.name}: {line}")
         if idx == 1:
-            script.append(f"Narrator: The prime field reaches {collision['midpoint']} and the room starts taking minutes.")
+            script.append(f"Narrator: {beats['escalation']}")
 
     if collision["kind"] == "therapy_session":
         script.extend(
             [
                 "GPT Under The Stairs: And how long have we been projecting ambition onto household storage?",
-                f"Narrator: {traces[0].name} writes 'cupboard' under emergency contacts.",
+                f"Narrator: {traces[0].name} writes '{callback}' under emergency contacts.",
             ]
         )
     elif collision["kind"] == "match_incident":
         script.extend(
             [
                 "The Referee of Truth: Whistle. That goal has unresolved theology.",
-                f"Narrator: {relic_name} is booked for simulation without shin pads.",
+                f"Narrator: {relic_name} is booked after {callback} appeals for a throw-in.",
             ]
         )
     elif collision["kind"] == "sect_formation":
         script.extend(
             [
                 "Auntie Brenda of the Remote: I've seen better cults at bingo.",
-                "Narrator: The new doctrine passes unanimously after everyone misunderstands the question.",
+                f"Narrator: The new doctrine passes unanimously after everyone misunderstands {callback}.",
             ]
         )
     else:
         script.append(f"Narrator: {collision['action']}")
 
+    script.extend(["", "Callback:", f"Narrator: {beats['payoff']}"])
     script.extend(
         [
             "",
             "Closing Sting:",
-            rng.choice(
-                [
-                    "The kettle applauds once and denies it.",
-                    "The stairs request a sequel in writing.",
-                    "Somewhere under the house, a mop achieves closure.",
-                    "The final whistle is played on an opera note nobody can afford.",
-                ]
-            ),
+            rng.choice(CLOSING_STINGS),
         ]
     )
     return script
 
 
-def _character_line(trace: CharacterTrace, partner: str, relic_name: str, collision: dict[str, Any], rng: random.Random) -> str:
-    templates = [
-        f"{trace.phrase} Also my creed has become '{trace.drifted_creed}', which feels like {partner}'s fault.",
-        f"I moved {trace.signature} and arrived at {trace.trace[-1]}, so legally {relic_name} owes me lunch.",
-        f"My mood is {trace.mood}. I am trying to be normal, but {collision['place_pressure']} keeps vibrating.",
-        f"{partner}, if your glyph touches my trace again, I am forming a committee.",
+def _character_line(
+    trace: CharacterTrace,
+    partner: str,
+    relic_name: str,
+    collision: dict[str, Any],
+    mode: str,
+    callback: str,
+    idx: int,
+    rng: random.Random,
+) -> str:
+    common = [
+        f"{trace.phrase} My creed has drifted into '{trace.drifted_creed}', and I want that noted before {partner} starts pointing.",
+        f"I moved {trace.signature} and landed on {trace.trace[-1]}, so legally {relic_name} owes the room an explanation.",
+        f"My mood is {trace.mood}. I am trying to be normal, but {collision['place_pressure']} keeps behaving like a witness.",
+        f"{partner}, if your glyph touches my trace again, I am putting {callback} in charge of the meeting.",
     ]
-    return rng.choice(templates)
+    mode_templates = {
+        "Therapy Under The Stairs": [
+            f"I came here for closure and the cupboard handed me {callback} with a consent form.",
+            f"My inner child says {relic_name} started it, and honestly that child has minutes.",
+            f"Can we pause? The stairs are reflecting back my footwork.",
+            f"{trace.phrase} Also, my trace ends at {trace.trace[-1]}, which feels clinically relevant.",
+            f"I tried naming the feeling, but it answered to '{trace.drifted_creed}'.",
+        ],
+        "Five-a-Side": [
+            f"I am not saying {partner} fouled me, but {callback} has gone down very theatrically.",
+            f"The whistle blew at {trace.trace[-1]}, which means {relic_name} is either offside or ordained.",
+            f"I want VAR, tea, and a ruling on whether feelings count as studs up.",
+            f"{trace.phrase} If that is not a booking, then gravity has lost the room.",
+            f"My creed drifted into '{trace.drifted_creed}' during injury time.",
+        ],
+        "Cult Drift": [
+            f"I second the motion that {callback} becomes sacred, but only until the adverts.",
+            f"Our doctrine is '{trace.drifted_creed}', which is worrying because I only meant to ask for crisps.",
+            f"If this is a sect, {partner} is treasurer because they look guilty near stationery.",
+            f"{trace.phrase} I propose we misunderstand that unanimously.",
+            f"The trace says {trace.trace[-1]}, so I have made badges.",
+        ],
+        "Collision": [
+            f"My belief and {partner}'s belief have touched elbows and now the hallway needs a mediator.",
+            f"{relic_name} produced a third opinion, and it looks suspiciously like {callback}.",
+            f"I reject this contradiction unless it comes with biscuits and a witness statement.",
+            f"{trace.phrase} This is not a paradox. This is bad room management.",
+            f"My trace ended at {trace.trace[-1]} and immediately asked for a chair.",
+        ],
+        "Bottom House": [
+            f"I vote we blame {callback}, then pretend this was an established house rule.",
+            f"The telly has gone quiet, which means either truth is near or Auntie Brenda found the batteries.",
+            f"I tried being reasonable, but {relic_name} started vibrating in a legal tone.",
+            f"{trace.phrase} That is my official statement and my snack position.",
+            f"My creed drifted into '{trace.drifted_creed}', so the chair is now involved.",
+        ],
+    }
+    mode_specific = mode_templates.get(mode, [])
+    if mode_specific and idx < len(mode_specific):
+        return mode_specific[idx % len(mode_specific)]
+    templates = common + mode_specific
+    return templates[(trace.trace[-1] + idx + rng.randrange(len(templates))) % len(templates)]
 
 
 def _render_trace_lines(traces: list[CharacterTrace], collision: dict[str, Any], rule: dict[str, Any]) -> list[str]:
     lines = [
         f"Rule triggered: {_safe_get(rule, 'name', 'Unwritten Rule')} - {_safe_get(rule, 'text', '')}",
         f"Collision: {collision['kind']} | midpoint={collision['midpoint']} | action={collision['action']}",
+        f"Callback chosen: {collision.get('callback', 'none')}",
     ]
     for trace in traces:
         lines.append(

@@ -1,0 +1,37 @@
+Seed: 505 | Mode: Collision | Weirdness: 66 | Cast Size: 4
+
+THE TOWEL STACK ORACLE AND THE NARRATOR FILES A COMPLAINT
+
+Setting: The Living Room Tribunal - a telly on mute, a remote under oath, and chairs arranged like consequences
+Cast: Newton in Shin Pads, Auntie Brenda of the Remote, The LMAO Engine In The Airing Cupboard, Mrs Algorithm From Next Door
+Mode: Collision | Weirdness: 66
+Relic: The Towel Stack Oracle
+Callback: the seventh stair
+
+Cold Open:
+Narrator: Everyone speaks at once, which briefly counts as a legal weather event.
+Narrator: If glyphs recur, let place remember the number seven.
+
+Scene:
+Narrator: A silence forms, panics, and asks for legal advice.
+Newton in Shin Pads: My belief and Auntie Brenda of the Remote's belief have touched elbows and now the hallway needs a mediator.
+Auntie Brenda of the Remote: The Towel Stack Oracle produced a third opinion, and it looks suspiciously like the seventh stair.
+Narrator: Newton in Shin Pads tries to make it normal, which is how The Towel Stack Oracle gets promoted.
+The LMAO Engine In The Airing Cupboard: I reject this contradiction unless it comes with biscuits and a witness statement.
+Mrs Algorithm From Next Door: This is why I do not lend you people casserole dishes. This is not a paradox. This is bad room management.
+Narrator: The narrator interrupts before Newton in Shin Pads can legally become a weather system.
+
+Callback:
+Narrator: The room briefly becomes sensible, hates it, and reverts.
+
+Closing Sting:
+The fridge hums the theme tune from a sitcom nobody remembers filming.
+
+WHY THIS HAPPENED
+Rule triggered: Callback Law - If a household object is named twice, it must return with authority.
+Collision: narrator_intervention | midpoint=24 | action=The narrator interrupts before Newton in Shin Pads can legally become a weather system.
+Callback chosen: the seventh stair
+- Newton in Shin Pads: prime Z31, seed 26, trace [26, 20, 6, 26, 20, 6, 26], mood=bind, drift=amplify, signature=N[26] -> 26 in Z31
+- Auntie Brenda of the Remote: prime Z41, seed 40, trace [40, 40, 40, 40, 40, 40, 40], mood=honour, drift=misremember, signature=B[40] -> 40 in Z41
+- The LMAO Engine In The Airing Cupboard: prime Z31, seed 30, trace [30, 30, 30, 30, 30, 30, 30], mood=void, drift=fragment, signature=L[30] -> 30 in Z31
+- Mrs Algorithm From Next Door: prime Z17, seed 10, trace [10, 14, 6, 3, 3, 3, 3], mood=spiral, drift=distort, signature=A[10] -> 3 in Z17

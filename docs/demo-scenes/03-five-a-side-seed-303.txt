@@ -1,0 +1,38 @@
+Seed: 303 | Mode: Five-a-Side | Weirdness: 70 | Cast Size: 4
+
+FIVE-A-SIDE WITH CONSEQUENCES AT AIRING CUPBOARD CONTROL ROOM
+
+Setting: Airing Cupboard Control Room - warm towels, blinking notes, and a laugh engine nobody admits they built
+Cast: Rocky the Stairwell Boxer, GPT Under The Stairs, The LMAO Engine In The Airing Cupboard, Mrs Algorithm From Next Door
+Mode: Five-a-Side | Weirdness: 70
+Relic: The Apple of Soft Fouls
+Callback: the biscuit minutes
+
+Cold Open:
+Narrator: The damp patch is declared playable after a short theological inspection.
+Narrator: The minutes are not legally minutes until Brenda sighs.
+
+Scene:
+Narrator: VAR checks the footage and finds three new emotions.
+Rocky the Stairwell Boxer: I am not saying GPT Under The Stairs fouled me, but the biscuit minutes has gone down very theatrically.
+GPT Under The Stairs: The whistle blew at 13, which means The Apple of Soft Fouls is either offside or ordained.
+Narrator: Rocky the Stairwell Boxer tries to make it normal, which is how The Apple of Soft Fouls gets promoted.
+The LMAO Engine In The Airing Cupboard: I want VAR, tea, and a ruling on whether feelings count as studs up.
+Mrs Algorithm From Next Door: This is why I do not lend you people casserole dishes. If that is not a booking, then gravity has lost the room.
+The Referee of Truth: Whistle. That goal has unresolved theology.
+Narrator: The Apple of Soft Fouls is booked after the biscuit minutes appeals for a throw-in.
+
+Callback:
+Narrator: Everyone agrees the incident was avoidable, then schedules it weekly.
+
+Closing Sting:
+A seventh step appears on the staircase and immediately asks for rent.
+
+WHY THIS HAPPENED
+Rule triggered: Seventh Step Return - Anything that reaches the seventh step comes back as either lore or a complaint.
+Collision: match_incident | midpoint=12 | action=A free kick is awarded because The Apple of Soft Fouls has become emotionally offside near the biscuit minutes.
+Callback chosen: the biscuit minutes
+- Rocky the Stairwell Boxer: prime Z29, seed 6, trace [6, 6, 6, 6, 6, 6, 6], mood=honour, drift=misremember, signature=R[6] -> 6 in Z29
+- GPT Under The Stairs: prime Z23, seed 17, trace [17, 13, 22, 18, 10, 21, 13], mood=bloom, drift=misremember, signature=G[17] -> 13 in Z23
+- The LMAO Engine In The Airing Cupboard: prime Z19, seed 16, trace [16, 1, 13, 15, 8, 17, 17], mood=spiral, drift=misremember, signature=L[16] -> 17 in Z19
+- Mrs Algorithm From Next Door: prime Z23, seed 2, trace [2, 1, 13, 1, 13, 1, 13], mood=echo, drift=invert, signature=A[2] -> 13 in Z23

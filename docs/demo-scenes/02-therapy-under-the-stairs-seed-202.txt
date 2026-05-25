@@ -1,0 +1,38 @@
+Seed: 202 | Mode: Therapy Under The Stairs | Weirdness: 74 | Cast Size: 4
+
+THE SHATTERGATE TEABAG AND THERAPY UNDER THE STAIRS
+
+Setting: The Void Cafe - three tables, no floor, and a menu that remembers your childhood wrong
+Cast: Dave of the Seventh Step, The Sofa That Keeps Score, Mrs Algorithm From Next Door, The LMAO Engine In The Airing Cupboard
+Mode: Therapy Under The Stairs | Weirdness: 74
+Relic: The Shattergate Teabag
+Callback: The Shattergate Teabag
+
+Cold Open:
+Narrator: A breakthrough is scheduled for half past never, beneath the coats.
+Narrator: We began as contradiction and stayed for the snacks.
+
+Scene:
+Narrator: Someone writes 'door hinge' in the feelings column.
+Dave of the Seventh Step: I came here for closure and the cupboard handed me The Shattergate Teabag with a consent form.
+The Sofa That Keeps Score: My inner child says The Shattergate Teabag started it, and honestly that child has minutes.
+Narrator: The prime trace lands on 10 and everyone pretends that helps.
+Mrs Algorithm From Next Door: Can we pause? The stairs are reflecting back my footwork.
+The LMAO Engine In The Airing Cupboard: I regret to report the airing cupboard is cooking again. Also, my trace ends at 4, which feels clinically relevant.
+GPT Under The Stairs: And how long have we been projecting ambition onto household storage?
+Narrator: Dave of the Seventh Step writes 'The Shattergate Teabag' under emergency contacts.
+
+Callback:
+Narrator: The Shattergate Teabag is placed in the centre of the room like that explains anything.
+
+Closing Sting:
+The stairs request a sequel in writing.
+
+WHY THIS HAPPENED
+Rule triggered: Warm Towel Proof - A joke is not proven until the airing cupboard gets warmer.
+Collision: therapy_session | midpoint=10 | action=Dave of the Seventh Step is asked to describe The Shattergate Teabag without blaming The Shattergate Teabag.
+Callback chosen: The Shattergate Teabag
+- Dave of the Seventh Step: prime Z17, seed 14, trace [14, 11, 2, 4, 2, 4, 2], mood=void, drift=fragment, signature=D[14] -> 2 in Z17
+- The Sofa That Keeps Score: prime Z31, seed 11, trace [11, 20, 7, 23, 23, 23, 23], mood=echo, drift=amplify, signature=S[11] -> 23 in Z31
+- Mrs Algorithm From Next Door: prime Z37, seed 34, trace [34, 9, 13, 9, 13, 9, 13], mood=echo, drift=invert, signature=A[34] -> 13 in Z37
+- The LMAO Engine In The Airing Cupboard: prime Z29, seed 5, trace [5, 4, 27, 1, 16, 2, 4], mood=honour, drift=misremember, signature=L[5] -> 4 in Z29
