@@ -9,6 +9,7 @@ python -m unittest discover -s tests
 python -m compileall mythmaker_app tests scripts
 python scripts\sample_scenes.py --demo --count 10
 python -m mythmaker_app.app --doctor
+powershell -ExecutionPolicy Bypass -File scripts\verify_release_zip.ps1 -ZipPath dist\MythMaker-v0.1.1.zip -SkipDoctor
 ```
 
 ## Fresh User Smoke Test
@@ -33,6 +34,7 @@ Close the terminal with `Ctrl+C`, then remove the temporary smoke folder.
 
 ```powershell
 powershell -ExecutionPolicy Bypass -File scripts\make_release_zip.ps1
+powershell -ExecutionPolicy Bypass -File scripts\verify_release_zip.ps1 -ZipPath dist\MythMaker-v0.1.1.zip
 ```
 
 Check the ZIP contains:
@@ -61,3 +63,12 @@ Check the ZIP does not contain:
    - no API keys,
    - Python 3.10+ required,
    - unzip, double-click, press `Generate Scene`.
+
+## Tester Loop
+
+Before or immediately after publishing a patch release:
+
+1. Run 3-5 tester attempts from the public ZIP.
+2. Record each attempt in `docs\TESTER_FEEDBACK.md`.
+3. Confirm at least 2 testers generate a scene in under 10 minutes.
+4. Write down every blocker before choosing the next patch.

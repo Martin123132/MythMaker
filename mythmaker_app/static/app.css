@@ -321,6 +321,7 @@ textarea {
   min-height: 1.3rem;
   margin: 12px 0 0;
   font-weight: 700;
+  overflow-wrap: anywhere;
 }
 
 @media (max-width: 1180px) {

@@ -4,6 +4,8 @@ import json
 import os
 from pathlib import Path
 import shutil
+import subprocess
+import sys
 import time
 from typing import Any
 
@@ -110,6 +112,28 @@ def export_scene(scene: dict[str, Any], export_format: str = "txt") -> dict[str,
     content = scene_to_html(scene) if export_format == "html" else scene_to_text(scene)
     path.write_text(content, encoding="utf-8")
     return {"path": str(path), "format": export_format, "title": title}
+
+
+def open_exports_folder(opener: Any | None = None) -> dict[str, Any]:
+    path = exports_dir().resolve()
+    root = app_data_dir().resolve()
+    if path != root and root not in path.parents:
+        raise RuntimeError("Refusing to open a folder outside MythMaker data.")
+
+    try:
+        if os.getenv("MYTHMAKER_DISABLE_OPEN") == "1":
+            return {"opened": False, "path": str(path), "error": "Opening folders is disabled for this run."}
+        if opener:
+            opener(path)
+        elif os.name == "nt":
+            os.startfile(str(path))  # type: ignore[attr-defined]
+        elif sys.platform == "darwin":
+            subprocess.Popen(["open", str(path)])
+        else:
+            subprocess.Popen(["xdg-open", str(path)])
+        return {"opened": True, "path": str(path)}
+    except (OSError, RuntimeError) as exc:
+        return {"opened": False, "path": str(path), "error": str(exc)}
 
 
 def doctor() -> dict[str, Any]:

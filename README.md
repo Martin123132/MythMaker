@@ -44,6 +44,7 @@ Close the terminal window, or press `Ctrl+C`, to stop MythMaker.
 - Runs entirely on your computer.
 - Saves edited seed banks and favourites under `%LOCALAPPDATA%\MythMaker`.
 - Exports scenes as TXT or HTML.
+- Opens the MythMaker exports folder after export, so users do not have to hunt for files.
 - Includes fixed demo scenes in `docs\demo-scenes` so the release can be checked repeatably.
 
 ## Seed Bank Editing
@@ -81,6 +82,7 @@ python -m mythmaker_app.app --doctor
 python -m unittest discover -s tests
 python -m compileall mythmaker_app tests scripts
 python scripts\sample_scenes.py --demo --count 10
+powershell -ExecutionPolicy Bypass -File scripts\verify_release_zip.ps1 -Version v0.1.0
 ```
 
 ## Release ZIP
@@ -89,9 +91,15 @@ Maintainers can build the public ZIP with:
 
 ```powershell
 powershell -ExecutionPolicy Bypass -File scripts\make_release_zip.ps1
+powershell -ExecutionPolicy Bypass -File scripts\verify_release_zip.ps1 -ZipPath dist\MythMaker-v0.1.1.zip
 ```
 
 The release checklist is in `docs\RELEASE_CHECKLIST.md`.
+
+## Tester Loop
+
+The tester script is in `docs\TESTER_SCRIPT.md`, and the feedback template is in
+`docs\TESTER_FEEDBACK.md`.
 
 ## Design Promise
 

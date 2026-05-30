@@ -16,6 +16,7 @@ class AppSmokeTests(unittest.TestCase):
         with tempfile.TemporaryDirectory() as tmp:
             env = os.environ.copy()
             env["MYTHMAKER_HOME"] = tmp
+            env["MYTHMAKER_DISABLE_OPEN"] = "1"
             proc = subprocess.Popen(
                 [sys.executable, "-m", "mythmaker_app.app", "--no-open", "--port", "0"],
                 stdout=subprocess.PIPE,
@@ -39,6 +40,11 @@ class AppSmokeTests(unittest.TestCase):
                 self.assertTrue(generate["ok"])
                 self.assertIn("script", generate["scene"])
                 self.assertIn("WHY THIS HAPPENED", generate["scene"]["script"])
+
+                open_exports = self._post_json(url + "/api/open-exports", {})
+                self.assertTrue(open_exports["ok"])
+                self.assertFalse(open_exports["export_folder"]["opened"])
+                self.assertTrue(open_exports["export_folder"]["path"].startswith(tmp))
             finally:
                 proc.terminate()
                 try:

@@ -32,6 +32,16 @@ class StorageTests(unittest.TestCase):
                 exported_html = storage.export_scene({"title": "Tiny Myth", "script": "Scene body"}, "html")
                 self.assertTrue(Path(exported_html["path"]).exists())
                 self.assertEqual(exported_html["format"], "html")
+
+                opened_paths = []
+                result = storage.open_exports_folder(opener=lambda path: opened_paths.append(path))
+                self.assertTrue(result["opened"])
+                self.assertEqual(opened_paths[0], Path(tmp, "exports").resolve())
+                self.assertTrue(str(opened_paths[0]).startswith(tmp))
+
+                blocked = storage.open_exports_folder(opener=lambda path: (_ for _ in ()).throw(OSError("blocked")))
+                self.assertFalse(blocked["opened"])
+                self.assertIn("blocked", blocked["error"])
             finally:
                 if old_home is None:
                     os.environ.pop("MYTHMAKER_HOME", None)

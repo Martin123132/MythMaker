@@ -103,6 +103,9 @@ class MythMakerHandler(BaseHTTPRequestHandler):
                     return
                 result = storage.export_scene(scene, str(payload.get("format") or "txt"))
                 self._json({"ok": True, "export": result})
+            elif path == "/api/open-exports":
+                result = storage.open_exports_folder()
+                self._json({"ok": True, "export_folder": result})
             else:
                 self._json({"ok": False, "error": "Unknown route"}, HTTPStatus.NOT_FOUND)
         except json.JSONDecodeError:

@@ -96,7 +96,7 @@ async function loadDoctor() {
   try {
     const data = await api("/api/doctor");
     const doctor = data.doctor;
-    el("doctorStatus").textContent = `Local only - ${doctor.character_count} characters`;
+    el("doctorStatus").textContent = `Local only - v${data.version} - ${doctor.character_count} characters`;
   } catch {
     el("doctorStatus").textContent = "Local only";
   }
@@ -241,7 +241,20 @@ async function exportScene(format) {
     method: "POST",
     body: JSON.stringify({ scene: currentScene, format }),
   });
-  setMessage(`Exported ${data.export.format.toUpperCase()}: ${data.export.path}`);
+  el("openExportsButton").hidden = false;
+  setMessage(`Exported ${data.export.format.toUpperCase()}. Saved in MythMaker exports: ${data.export.path}`);
+}
+
+async function openExportsFolder() {
+  const data = await api("/api/open-exports", {
+    method: "POST",
+    body: JSON.stringify({}),
+  });
+  if (data.export_folder.opened) {
+    setMessage(`Opened MythMaker exports folder: ${data.export_folder.path}`);
+  } else {
+    setMessage(`Exports folder: ${data.export_folder.path}`);
+  }
 }
 
 function switchTab(tabName) {
@@ -276,6 +289,7 @@ function bindEvents() {
   el("copyButton").addEventListener("click", () => copyScript().catch((err) => setMessage(err.message)));
   el("exportTxtButton").addEventListener("click", () => exportScene("txt").catch((err) => setMessage(err.message)));
   el("exportHtmlButton").addEventListener("click", () => exportScene("html").catch((err) => setMessage(err.message)));
+  el("openExportsButton").addEventListener("click", () => openExportsFolder().catch((err) => setMessage(err.message)));
   el("weirdnessInput").addEventListener("input", () => {
     el("weirdnessValue").textContent = el("weirdnessInput").value;
   });
